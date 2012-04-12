@@ -1,0 +1,5 @@
+f77 -c dmdsm.f scattering.f density.f sort2a.f gasdev.f ran1.f
+ar cvr dmd.a  dmdsm.o scattering.o density.o sort2a.o gasdev.o ran1.o
+rm *.o
+f77 -o dmd dmd.f dmd.a
+cp dmd $PSR_DEV/bin/
